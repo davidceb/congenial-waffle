@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<!--Always declare the document type when creating an index page, in this case the file is an html file-->
+<html lang="en">
+  <!--Here the html tag will house the entirety of the document and the attribute is declaring what language the file will be written in.-->
+  <head>
+    <!--The head tag is where all the metadata for the document is found as well as links to external sources like stylesheets and scripts, character encoding, viewport settings, and SEO information for search engines.-->
+    <meta charset="utf-8">
+    <!--This meta tag and its attribute declare the encoding the document will use. The encoding is what determines how the characters in the file will be interpreted and represented. UTF-8 is a commonly used character encoding because it supports many languages and symbols-->
+    <meta name="author" content="David Ceballos">
+    <meta name="description" content="This page contains all the things I am learning how to create as I learn HTML">
+    <title>My First Web Page</title>
+    <!--This tag is the tile of the document, however as a tag within the head it will not be displayed anywhere on the web page. Rather it displays on the title bar and the tab in the browser. It also is used by search engines to identify what is on the page and display it if relevant to the user. Thusly, the title is important in SEO.-->
+    <link rel="icon" href="html5.png" type="image/x-icon">
+    <!-- <link> is a element that links external sources to the file. These sources can include stylesheets, favicons, scripts, etc. The rel attribute specifies a specific relationship between the document and the linked source. The href attribute specifies a URL or path to an external file. The type attribute is used to specify the MIME (Multipurpose Internet Mail Extension). MIME is a standard that extends the format of email messages to support images, videos, audio, and app programs. The main goal of MIME is to enable the exchange of multimedia content through emails and HTTP. In HTML context, MIME is used to specify the type of source that is being linked. The <link> tag is a self terminating element/tag and does not needs the </link> closing tag.-->
+    <link rel="stylesheet" href="main.css" type="text/css">
+    <!--The rel attribute defines the relationship between the linked source and the current document. The browser looks at the rel to see how the link is related to the current page so that it an understand the purpose of the link.-->
+  </head>
+
+  <body>
+    <!--The body is where the content that will be displayed in the web page is written (text, images, forms etc.). It is comprised of headings (<h1>-<h6> with each being less important as they go up.) paragraphs <p>, images <img>, links <a> (stands for "anchor") etc.-->
+
+    <header>
+      <!--The <header> element is a semantic element. It needs to go before any other element in the main container besides the <body>. The <header> element is used to define introductory content or a group of introductory content within a section of a document. It typically includes headings, subheadings, navigational elements, logos, and other elements related to the section or the overall page. The <header> element is not restricted to the top of the page but can be used within other sections to define a header for that specific section.-->
+
+      <section id="html">
+        <!-- <section> is a semantic element that houses a thematic group of content. For this first section, it houses <h1-h6> and they are thematically grouped. Kind of like chapters in a book.In addition you can nest <section> elements within each other to represent a hierarchical structure. Each nested <section> can have its own heading, and each should be able to be it's own stand-alone piece of content.-->
+
+        <nav aria-label="primary-navigation">
+          <!--The <nav> element is used to container for links used to navigate throughout the page and its sections, menus, and other pages that make up the website. It is another semantic element that helps organize a document for both other programmers and accessability assistance.-->
+          <!--The aria-label="" attribute is part of the Accessible Rich Internet Applications (ARIA) specification, which is a set of attributes that can be added to HTML elements to enhance the accessibility of web content, especially for users with disabilities. The aria-label attribute is used to provide a concise label that describes the purpose or function of an element, especially when the element itself does not have a visible label. The aria-label attribute is particularly helpful for elements like buttons, links, and form elements, where a descriptive label is essential for understanding the element's function or purpose.-->
+          <p>Page Navigation</p>
+          <ul>
+            <li><a class="nav" href="#html">Hello World!</a></li>
+            <!--This attribute value ("#")for the <a> element allows for links to the id selectors within this page.-->
+            <li>
+              <a class="nav" href="#inline">Another &lt;h1&gt; element???</a>
+            </li>
+            <li>
+              <a class="nav" href="#links"
+                >Ordered lists, Unordered lists, and list items</a
+              >
+            </li>
+            <li><a class="nav" href="#links">Links!</a></li>
+          </ul>
+        </nav>
+
+        <figure>
+          <!--figure groups together sections that are directly related, mostly used with images and videos accompanied by captions. A figure can stand on its own without any real context. If removed from the document and placed elsewhere, it would still make sense when seen and read.-->
+          <img
+            src="img/Beginners-Guide-To-Writing-Good-HTML-january-2021.jpg" alt="Writing good HTML5" title="I am learning HTML5" width="670" height="408" loading="lazy">
+          <!-- <img> stands for image obviously and is the way to imbed images into the web page.There are two(2) very important attributes to use: src="" and alt="". src is where we link the tag to an image, like href for urls. The title attribute is unnecessary by a welcome addition. We are now encouraged to use the height and width of the actual image. The reason is that the web page will set aside space in the page for the image so that we avoid cumulative layout shift. It avoids clicking on the wrong thing like so many websites. Lastly, the loading="lazy" attribute and value make the image load only when getting close to it. Without it, the image would load as soon as we enter the web page and that would slow the browser down. This way it loads only when needed and conserves browser memory.-->
+          <figcaption>
+            Getting good at programming starts with being able to write HTML5
+            proficiently.
+          </figcaption>
+          <!--<figcaption> element is a semantic tag to add meaning to the picture. It only works within its parent element <figure>. It is meant to add more meaning to anything within its parent <figure> element, but it has to be the first or last element within the <figure> parent container.-->
+        </figure>
+
+        <h1>Hello World!</h1>
+        <!--The <h1> tag is the most important heading on a page. There should only ever be a single <h1> tag per html document. However, with the introduction of HTML5 there can be more than one <h1> heading as long as semantic sectioning elements are used to denote each individual section. More on these semantic elements can be found lower down on this page.-->
+        <p>This is my first web page.</p>
+        <!--The <p> tag stands for paragraph and it is considered a block level element (it starts on a new line and cover the full width of the container on that line). The <p> tag is usually used to separate blocks of text on a page.(As an example I colored the entire <p> block to demonstrate the space it occupies)-->
+
+        <h2>This is how the h2 element looks like.</h2>
+
+        <h3>This is how the h3 element looks like.</h3>
+        <!--The importance of the information is whats important when using the headers<h1-h6>. This is called the header hierarchy. This lets the browser and search engine identify what the importance of each header is. This is called semantic HTML. Semantic html tags focus on the meaning of the content rather that just the way it looks. Certain tags carry meaning and hive information about how the page is structured and its contents. It makes the code more readable for both developers and machines. Semantic HTML is important for accessability and SEO optimization.-->
+
+        <h4>
+          This is how the h4 element looks like. On this container I am also
+          demonstrating what a line break <br>
+          is and how it looks. normally the text will keep going until it
+          reaches the end of the container and then wrap under to the next line
+          inside the container, like so.
+        </h4>
+        <!--The <br> element(stands for "line break") is used to make a new line within the text. Basically it is the equivalent of enter in a normal text writing app. Typically used when text requires it, like for a poem, addresses, or just a particular style of text formatting that requires a new line. It is also a self terminating tag. It should however not be used to separate content on the page. For that the used of other elements like the h1-h6 and p should be used.-->
+
+        <h5>h5</h5>
+
+        <h6>h6</h6>
+      </section>
+    </header>
+    <!--It's important to note that the <header> element is not limited to a single use on a page. You can use it within different sections to define headers for those specific sections.-->
+
+    <hr>
+    <!--The <hr> element stands for horizontal rule and it is used to make thematic breaks or separations between content on the page. The line that hr makes occupies the width of the container. The sections it is separating should all share the same or similar theme. For example, you shouldn't be talking about anything but programming in the <h1-h3> if that is the topic. If <h4-h6> are about planing a vacation (a completely unrelated topic) then it should be separated into a group of their own, thus the use of the hr element.HTML do not honor all the spaces that you make. They will not be represented in the visual part of the page. This is called white space collapsing. They are used to make reading the code a little easier. -->
+
+    <section id="inline">
+      <!--adding an id attribute to the any element will help be an identifier which can then be used for various purposes, such as linking to a specific section within the same page or styling that section with CSS or applying JavaScript to interact with each section dynamically. Each id attribute has to be unique within the entire document so that it allows its element to be targeted without conflicting with other elements.-->
+
+      <figure>
+        <img src="img/markus-spiske--dbOrdtrR1A-unsplash.jpg" alt="image of HTML code" title="HTML5 code" width="670" height="408" loading="lazy">
+      </figure>
+
+      <h1>
+        Another h1 element??? Yes, since this is another thematic section,
+        another set of h1-h6 can be used.
+      </h1>
+      <!--In line level elements will be highlighted to show the space they occupy.-->
+
+      <h2>
+        Block level and inline level elements!(see code for more information)
+      </h2>
+      <!--<h1-h4> are examples of only block-level elements used. In fact, <h3-h4> are also block-level element. However, the last two headings I will use to demonstrate what inline elements are. Block-level elements are elements that start on a new line and take up the entire width of their container. I highlighted all the headings to demonstrate the space block level elements occupy. Inline elements only occupy the space they need and do not force a new line.-->
+      <p>
+        This paragraph will have <em>inline level</em> elements in its
+        composition. See code for more information.
+      </p>
+      <!--The <em> inline element is not meant to be used to italicize letters (any aesthetic text changes like font, bold, size will be changed using CSS). Rather, it is meant to emphasize the importance or tone of the text, mostly for SEO and accessability purposes. <em> is a semantic tag: it has meaning about the structure or presentation of the content. The browser will emphasize the text inside of the "em" tags-->
+
+      <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HTML Entities.</h3>
+      <!--&nbsp; stands for "non-breaking space". Since blank space collapse occurs, there is no way to implement spaces like indents using the standard space-bar methods, as shown in the text above. No matter how many spaces I use, only on will be rejected and the rest ignored. That is what the function of this particular character entity: &nbsp;-->
+      <p>
+        &lt;There is a way to type in the less-than and greater-than symbols so
+        that they actually show up in the displayed text on the page and not
+        just be turned into code text immediately&gt;
+        <a
+          href="https://html.spec.whatwg.org/multipage/named-characters.html#named-character-references"
+          >List</a
+        >
+        of the named character references.
+      </p>
+      <!--The character entities &lt; and &gt; (less-than, greater-than respectively). These character entities are usually represented using a specific recipe: it starts with the ampersand symbol (&) then an abbreviation of the intended function, followed by a semicolon (;). -->
+      <h4>
+        Another inline element is <abbr title="abbreviation">&lt;abbr&gt;</abbr>
+      </h4>
+      <!--<abbr> stands for abbreviation or acronym.It is used so that when a user hovers over the abbreviated word or acronym, its full unabbreviated meaning is shown. The use of <abbr> is nice to have but it is not an accessible item. Nothing that is crucial to the page should ever be put within a <abbr> element because it requires you to see it, thus limiting the accessibility of it. A screen reader for example cannot read the <abbr> text.-->
+      <p>The &lt;address&gt; is another commonly used inline element.</p>
+      <address>
+        1234 Center Ln.<br>
+        Hollow Earth Core<br>
+        Planet Earth, Sol System<br>
+        MilkyWay Galaxy
+      </address>
+    </section>
+
+    <hr>
+
+    <section id="lists">
+      <h1>
+        Ordered lists &lt;ol&gt;, Unordered lists &lt;ul&gt;, and list items
+        &lt;li&gt;.
+      </h1>
+      <!--Ordered lists and Unordered lists are important and commonly used elements in any webpage. Ordered list <ol></ol> is used to represent a list of items where the order is important to the list, like a list of steps in a recipe or instructions. An unordered list is used to list items of which their order is of no importance. Both lists items have bullet points or numbers in front of them. The list items is written as <li></li>-->
+      <p>An ordered list is automatically indented and numbered.</p>
+      <ol>
+        <!--The main lists can't have text within them. The composition of a list must be the list type and list items. Nested lists within other lists follow the same rules. If text is needed as a title of the list or inside the list(like to differentiate the nested lists) a <p> elements needs to be nested if text is desired within the list itself or within a list item.-->
+        <li>
+          Item 1. Example of an &lt;ul&gt; nested within a &lt;ol&gt;<!--An ordered list can also have another list nested inside of it, be it ordered or unordered.-->
+          <ul>
+            <li>sub-item 1.1</li>
+            <li>sub-item 1.2</li>
+            <li>sub-item 1.3</li>
+          </ul>
+        </li>
+        <li>
+          Item 2. Example of an &lt;ol&gt; within a &lt;ol&gt; list item.
+          <ol>
+            <li>sub-item 2.1</li>
+            <li>sub-item 2.2</li>
+            <li>sub-item 2.3</li>
+          </ol>
+        </li>
+        <li>
+          Item 3. Complex list tree.
+          <ol>
+            <li>
+              sub-item 3.1
+              <ul>
+                <li>
+                  sub-item 3.01
+                  <ol>
+                    <li>
+                      sub-item 3.001
+                      <ol>
+                        <li>sub-item 3.0001</li>
+                      </ol>
+                    </li>
+                  </ol>
+                </li>
+              </ul>
+            </li>
+            <li>sub-item 3.2</li>
+          </ol>
+        </li>
+      </ol>
+    </section>
+
+    <hr>
+
+    <section id="links">
+      <h1>Links!</h1>
+      <p>
+        I used a link earlier in the page, but here is where I will focus on
+        this topic.
+      </p>
+      <p>
+        I use the <a href="https://developer.mozilla.org/en-US/"><abbr title="Mozilla Developer Network">MDN</abbr></a> very much as well as <a href="https://chat.openai.com/">chatgpt</a> in my learning of programming.
+      </p>
+      <!--The <a> element stands for anchor and is the foundation for linking other pages to this one. On its own however it will do nothing. It needs the attribute href="" to work. href="" stands for "hyperlink reference". Imputing a URL into this attribute will make the <a> element turn into a link.-->
+      <p>
+        Dave Gray's
+        <a href="https://courses.davegray.codes/view/courses/web-dev-roadmap-for-beginners/1702821-web-dev-foundations/5379056-html"> Developer Roadmap</a>
+      </p>
+      <!--When a link has been visited it will turn purple, and it is blue when it has not been visited. The colors for this link can be changed using CSS.-->
+      <p>
+        Dave Gray's
+        <a
+          href="https://www.youtube.com/watch?v=mJgBOIoGihA&t=1991s&ab_channel=DaveGray"
+          >4 hour HTML course!</a>
+      </p>
+      <!--Unlike when I linked the CSS stylesheet, this link has a full URL in its href attribute. When using an external URL link from the web, it is referred to as an "absolute reference". The CSS link is called a "relative reference", and that means that it is on the same server that we are on. -->
+    </section>
+
+    <figure>
+      <figcaption>
+        This is also an example of a how to construct a &lt;figure&gt; semantic
+        element. &lt;figure&gt; can is not only used for images but also for:
+        videos, code snippets(like the one below)
+      </figcaption>
+      <p>
+        <code>
+          &lt;figure&gt;<br>
+          &nbsp;&nbsp;&lt;p&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;code&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;/code&gt;<br>
+          &nbsp;&nbsp;&lt;/p&gt;<br>
+          &lt;/figure&gt;
+        </code>
+      </p>
+      <p>
+        &lt;figure&gt; can not only be used for images but also for: videos,
+        code snippets(like the one above), diagrams or illustrations,
+        interactive content, mathematical equations, tables, and audio content.<!--The key is to use <figure> when you want to associate a piece of content with a caption or legend, providing additional context or information about the content. It enhances the structure and semantics of your HTML document, making it more accessible and understandable. -->
+      </p>
+    </figure>
+
+    <hr>
+
+    <aside> <!--The <aside> element in HTML is used to define content that is tangentially related to the content around it. This content is considered separate from the main content, and it can be used for sidebars, pull quotes, advertisements, navigation, and other content that is related but not crucial to the primary flow of the document. It can be particularly useful for improving the structure and accessibility of a document, especially when dealing with complex layouts.-->
+      <details> <!--It serves as a container for content that can be shown or hidden. The visible content represents a summary or a title, and the hidden content is revealed when the user interacts with the widget, typically by clicking on the summary. The <details> element contains a <summary> element, which is visible to the user. It serves as a clickable title or summary. The actual content that is initially hidden is placed inside the <details> element (in this case, a paragraph). When the user clicks on the summary, the hidden content is revealed. The browser typically animates the opening and closing of the content. You can use the <details> element to create collapsible sections, interactive FAQs, or any scenario where you want to provide additional information that can be optionally revealed by the user.-->
+        <summary>
+          This section is about semantic html and its many functions
+        </summary>
+      </details>
+    </aside>
+
+    <footer>
+      <!--The <footer> element is used to define the footer of a section or a page. It typically contains metadata, copyright information, contact details, links to related documents, and other elements that are considered footer content. The <footer> is placed at the bottom of its containing element, whether it's a section, article, or the entire page. It's not limited to the global footer of the entire page; you can have multiple <footer> elements in different sections of your document if needed.-->
+      <nav aria-labelledby="secondary-navigation">
+        <!--The aria-labelledby attribute is another attribute in the Accessible Rich Internet Applications (ARIA) specification. It is used to associate an element with one or more other elements that act as labels for it. This attribute is particularly useful when an element's label is provided by one or more elements elsewhere in the document, and you want to associate that label with the target element.-->
+        <p id="secondary-navigation">
+          &lt;&lt;&lt;<a href="about_me.html">&copy;David Ceballos</a
+          >&gt;&gt;&gt;
+        </p>
+        <p><a href="#">Back to top</a></p>
+        <!--This <a> href attribute value ("#") on its own without a id selector attached to it just returns you to the top of the page.-->
+      </nav>
+    </footer>
+  </body>
+</html>

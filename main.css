@@ -1,0 +1,42 @@
+html {
+    font-size: 22px;
+}
+body {
+    background-color: #333;
+    color: whitesmoke;
+}
+h1 {
+    background-color: orangered;
+    color: black;
+}
+h2, h3, h4, h5, h6, address {
+    background-color:aqua;
+    color: black;
+}
+p {
+    background-color: deeppink;
+    color: black;
+}
+abbr, em {
+    background-color: yellow;
+    color: black;
+}
+ol, ul, li {
+    background-color: greenyellow;
+    color: black;
+}
+br {
+    background-color:olivedrab;
+}
+a {
+    color: #eee; 
+}
+a:hover, a:active {
+    color: rgb(1, 208, 255);
+}
+.nav, .download {
+    color: crimson;
+}
+.nav:hover, .nav:active, .download:hover, .download:active {
+    color: rgb(0, 100, 100);
+}
